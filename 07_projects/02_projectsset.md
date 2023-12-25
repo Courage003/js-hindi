@@ -1,4 +1,4 @@
-# Projects related to DOM in Javascript
+# BMI Calculator
 
 ## project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-6cwcij?file=2-BMICalculator%2Findex.html,2-BMICalculator%2Fchaiaurcode.js)
