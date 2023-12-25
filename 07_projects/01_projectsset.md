@@ -1,4 +1,4 @@
-# Projects related to DOM in Javascript
+# BMI Calculator
 
 ## project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode-6cwcij?file=1-colorChanger%2Findex.html,1-colorChanger%2Fchaiaurcode.js,1-colorChanger%2Fstyle.css)
