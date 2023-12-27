@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Projects</title>
+</head>
+<body>
+    <h1>Hunt4edu</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+    
+</body>
+<script>
+    const sayDate=function(s){
+        console.log(s, Date.now())
+    }
+    
+
+    //continuous execution for that particular second
+
+    let IntervalId;
+
+    document.querySelector('#start').addEventListener('click',function(){
+        IntervalId =setInterval(sayDate,1000,"Hi")
+        console.log('started')
+    })
+    
+    
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        
+        clearInterval(IntervalId)
+        console.log('stopped')
+    })
+
+    
+
+
+
+</script>
+</html>
