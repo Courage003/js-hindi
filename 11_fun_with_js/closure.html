@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body style="background-color: black;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    /*function init() {
+    let name = "Mozilla"; // name is a local variable created by init
+    function displayName() {
+        // displayName() is the inner function, that forms the closure
+        console.log(name); // use variable declared in the parent function
+    }
+    displayName();
+    }
+init();*/
+//parents share with child but child doesn't do it with its siblings
+//child dont share with parents also
+/*function outer(){
+    let username = "dhruv"
+    function inner(){
+        console.log("inner", username)
+    }
+    inner()
+}
+outer()
+
+console.log("TOO Outer", username); //non-accessible scope
+//Inner function has all access to outer function variables - Lexical Scoping*/
+
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;
+}
+
+const myFunc = makeFunc();
+myFunc();
+
+//Closure
+
+
+</script>
+
+<script>
+    /*document.getElementById("orange")
+    .onclick= function(){
+        document.body.style.backgroundColor=`orange`
+    }
+
+    document.getElementById("green")
+    .onclick= function(){
+        document.body.style.backgroundColor=`green`
+    }*/
+//Closure Real world example where after clicking button its color transformation works
+    function clickHandler(color){
+        //document.body.style.backgroundColor=`${color}`
+        return function(){
+            document.body.style.backgroundColor= `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick=clickHandler("orange")
+</script>
+</html>
